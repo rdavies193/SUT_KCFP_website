@@ -1,0 +1,139 @@
+%%%%% This is a simple template for writing proposals for Keck
+%%%%% Observing Support through the CAS SACK (Swinburne Advisory
+%%%%% Committee for Keck).
+%%%%%
+%%%%% To produce a PDF from this file execute the following from a
+%%%%% command line:
+%%%%%
+%%%%% latex STACK_proposal.tex ; latex STACK_proposal.tex ;
+%%%%%   dvips STACK_proposal.dvi -o STACK_proposal.ps ;
+%%%%%   ps2pdf14 -sPAPERSIZE=a4 STACK_proposal.ps STACK_proposal.pdf
+%%%%% 
+%%%%% or, if you prefer,
+%%%%%
+%%%%% pdflatex STACK_proposal.tex ; pdflatex STACK_proposal.tex
+%%%%%
+%%%%% Take note of the comments below starting with "%%%%%". DO NOT
+%%%%% EDIT OR REMOVE commands with comments which tell you not to!
+
+\documentclass[12pt,a4paper]{article} % - DO NOT EDIT OR REMOVE!
+\usepackage{fancyhdr,txfonts} % - DO NOT EDIT OR REMOVE!
+
+%%%%% Include your own packages here. For example, if you want use the
+%%%%% natbib package, leave uncommented the first two commands below
+%%%%% (the second command specifies puctuation within citations; the
+%%%%% example shown gives something like the MNRAS style). The third
+%%%%% commented-out command below includes the commonly used to
+%%%%% include figures. The fourth commented-out command might be
+%%%%% useful while you're drafting your proposal.
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+%\usepackage{graphicx}
+%\usepackage[light]{draftcopy}
+\newcommand\doc{Keck Observatory Funding Request Form}
+%%%%% Enter the Keck cover sheet code, PI surname and proposal title
+%%%%% below. Please enter the Keck cover sheet code in the same format
+%%%%% as given on the Keck cover sheet. NOTE: Include any formatting
+%%%%% commands (e.g. boldface, \boldmath commands etc.) for your
+%%%%% proposal title here.
+\newcommand\keckcode{20???\_CS?????}
+\newcommand\PIsurname{PI SURNAME}
+\newcommand\proposaltitle{Title of proposal} 
+
+% Page layout - DO NOT EDIT OR REMOVE!
+\topmargin=-20mm
+\headheight=0mm
+\textwidth=176mm
+\textheight=266mm
+\oddsidemargin=-8mm
+\evensidemargin=-8mm
+\renewcommand\baselinestretch{1.0}
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{{\bf\MakeUppercase{\keckcode}}}}
+\rhead{\fancyplain{}{\bf\thepage}}
+\chead{\fancyplain{}{{\bf\MakeUppercase{\PIsurname}}}}
+\lfoot{}
+
+%%%%% Page layout - YOU MAY EDIT THESE IF YOU WISH.
+%%%%%
+%%%%% NOTE THAT IT IS STRONGLY RECOMMENDED NOT TO CROWD YOUR TEXT AND
+%%%%% FORMATTING TOO MUCH BECAUSE IT MAKES READING THE PROPOSAL DIFFICULT.
+%%%%% USE SIMPLE FORMATTING COMMANDS LIKE \smallskip, \bigskip, \vspace
+%%%%% ETC. TO FORMAT YOUR TEXT.
+\parindent=1.5em % Paragraph indentation length (in units of the size
+                 % of an "M"). If you want to keep this in general but
+                 % want a specific paragraph not to be indented, use
+                 % the \noindent command at the start of that paragraph
+\parskip=0.5em   % Space between paragraphs.
+
+\begin{document}
+\centerline{\Large{\underline{\bf \doc}}}\bigskip
+\bigskip
+
+% Proposal title - DO NOT EDIT OR REMOVE!
+\centerline{\large{\bf \proposaltitle}}\bigskip
+
+%%%%% Case for Keck Observing Support (KOS) funds.  This should be made by
+%%%%% PIs of successful proposals once they have determined the amount of
+%%%%% funding to be available from other sources, particularly the Faculty
+%%%%% Research Committee and AMRFP funds. The PI needs to state the
+%%%%% breakdown costs for each individal item (e.g., flight, car hire,
+%%%%% accomindationes, etc.) along with the total costs and other sources of
+%%%%% funds they have pursued.  KOS applications should be sent to the STACK
+%%%%% technical secretary.  The technical secretary will check the reasons
+%%%%% for the request and pass any queries to the SACK. The SACK will
+%%%%% approve all allocations of KOS funds. The maximum KOS funding
+%%%%% allocated to any given proposal will be \$2200. At the end of each
+%%%%% calendar year residual funds in the Keck support budget for that year
+%%%%% may be distributed retrospectively to that year's Keck users.  A TOTAL
+%%%%% OF UP TO ONE PAGE is allowed.
+
+
+\noindent{\bf CASE FOR OBSERVING SUPPORT FUNDS:}
+
+\bigskip
+Case for Keck Observing Support (KOS) funds.  This should be made by
+PIs of successful proposals once they have determined the amount of
+funding to be available from other sources, particularly the Faculty
+Research Committee and AMRFP funds. The PI needs to state the
+breakdown costs for each individal item (e.g., flight, car hire,
+accomindationes, etc.) along with the total costs and other sources of
+funds they have pursued.  KOS applications should be sent to the STACK
+technical secretary.  The technical secretary will check the reasons
+for the request and pass any queries to the SACK. The SACK will
+approve all allocations of KOS funds. The maximum KOS funding
+allocated to any given proposal will be \$2200. At the end of each
+calendar year residual funds in the Keck support budget for that year
+may be distributed retrospectively to that year's Keck users.  A TOTAL
+OF UP TO ONE PAGE is allowed.
+
+Example Table:
+\bigskip
+\begin{center}
+\begin{tabular}{|r|r|r|}
+\hline
+{\bf Type of Expense}& {\bf Total  Expense} & {\bf KOS  Claim}\\
+\hline
+Air fare      &        &        \\
+Car Rental    &        &        \\
+Accommodation &        &        \\
+Skybus        &        &         \\
+Meals         &        &         \\
+
+\hline
+\bf{Total}    &        & \bf{\$2200.00}\\
+\hline
+\end{tabular}
+\end{center}
+\bigskip
+
+% Signatures required once approved - DO NOT EDIT OR REMOVE!
+\noindent{\large{\underline{ Signatures:}}}\smallskip
+
+\noindent Swinburne PI (or representative):  \smallskip
+
+\noindent Swinburne Advisory Committee for Keck Representive:  \smallskip
+
+\noindent Date:
+
+\end{document}

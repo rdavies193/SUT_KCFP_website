@@ -1,0 +1,14 @@
+ErrorDocument 403 http://astronomy.swin.edu.au/error403internal.html
+
+<FILES cfp.html>
+order deny,allow
+deny from all
+allow from .swin.edu.au 136.186
+AuthUserFile /web/vhost/astronomy.swin.edu.au/internal/.htpasswd
+AuthName Security-Check
+AuthType Basic
+require user vrdemo
+satisfy any
+</FILES>
+
+Redirect /research/keck/cfp.html http://ausgo.aao.gov.au/keck.html

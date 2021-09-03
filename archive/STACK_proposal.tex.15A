@@ -1,0 +1,341 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a simple template for writing proposals for Keck
+% telescope time through the CAS STACK (Swinburne Time
+% Allocation Committee for Keck).
+%
+%    Version 2015A.1
+%
+% To produce a PDF from this file execute the following from a
+% command line:
+%
+% latex STACK_proposal.tex ; latex STACK_proposal.tex ;
+%   dvips STACK_proposal.dvi -o STACK_proposal.ps ;
+%   ps2pdf14 -sPAPERSIZE=a4 STACK_proposal.ps STACK_proposal.pdf
+% 
+% or, if you prefer,
+%
+% pdflatex STACK_proposal.tex ; pdflatex STACK_proposal.tex
+%
+% Take note of the comments inserted along the way.  DO NOT
+% EDIT OR REMOVE commands with comments which tell you not to!
+%
+%   ***  PLEASE NOTE ***
+% A proposal consists of a Keck cover sheet and this proposal form.  
+% This proposal form describes the requirements and page limits for
+% the various sections.  Overall, there is a 3-page maximum for the 
+% Scientific Justification section and 1-page maximum for the 
+% Technical Feasibility and Flexibility & Minimum Time sections.  
+% Target lists may be attached to the proposal as a separate 
+% sheet(s).  There is a 2-page maximum for the sections BACKUP 
+% PROGRAM, CONTRACT END, APPLICANTS' ROLES, STUDENT THESIS 
+% INVOLVEMENT, OTHER APPLICATIONS, and FUTURE APPLICATIONS.
+% The PREVIOUS ALLOCATIONS AND OUTCOMES section is now attached as 
+% a separate sheet(s) at the end of the proposal.  
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article} % - DO NOT EDIT OR REMOVE!
+\usepackage{fancyhdr,txfonts}         % - DO NOT EDIT OR REMOVE!
+
+% Include your own packages here.  For example, if you want use the
+% natbib package, leave the first two commands below uncommented
+% (the second command specifies punctuation within citations; the
+% example shown gives something like the MNRAS style).  The third
+% command below (commented out) includes that commonly used to
+% include figures. The fourth command might be useful while you're 
+% drafting your proposal.
+
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+\usepackage{graphicx}
+%\usepackage[light]{draftcopy}
+
+% Enter the Keck cover sheet code, PI surname and proposal title
+% below.  Please enter the Keck cover sheet code in the same format
+% as given on the Keck cover sheet.  NOTE: Include any formatting
+% commands (e.g. boldface, \boldmath commands etc.) for your
+% proposal title here.
+
+\newcommand\keckcode{2015A\_W000XX} % Modify to your specific 
+                                    % proposal ID number
+\newcommand\PIsurname{PI SURNAME}
+\newcommand\proposaltitle{Title of proposal} 
+
+% Page layout - DO NOT EDIT OR REMOVE BETWEEN THE LINES!
+%------------------------------------------------------------------
+\topmargin=-20mm
+\headheight=0mm
+\textwidth=176mm
+\textheight=266mm
+\oddsidemargin=-8mm
+\evensidemargin=-8mm
+\renewcommand\baselinestretch{1.0}
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{{\bf\MakeUppercase{\keckcode}}}}
+\rhead{\fancyplain{}{\bf\thepage}}
+\chead{\fancyplain{}{{\bf\MakeUppercase{\PIsurname}}}}
+\cfoot{}
+%------------------------------------------------------------------
+% Page layout - YOU MAY EDIT THESE IF YOU WISH.
+%
+% NOTE THAT IT IS STRONGLY RECOMMENDED NOT TO CROWD YOUR TEXT AND
+% FORMATTING TOO MUCH BECAUSE IT MAKES READING THE PROPOSAL 
+% DIFFICULT.  USE SIMPLE FORMATTING COMMANDS LIKE \smallskip, 
+% \bigskip, \vspace ETC.
+
+\parindent=1.5em % Paragraph indentation length (in units of the size
+                 % of an "M", or change to cm, etc.).  If you want to 
+                 % keep this for general usage but want a specific 
+                 % paragraph not to be indented, use the \noindent 
+                 % command at the start of that paragraph
+\parskip=0.5em   % Space between paragraphs.
+
+\begin{document}
+
+% Proposal title - DO NOT EDIT OR REMOVE!
+\centerline{\large{\bf \proposaltitle}}\smallskip
+
+\noindent{\bf SCIENTIFIC JUSTIFICATION:}
+
+% {\it Instructions:} Scientific Justification: {\bf A MAXIMUM OF THREE
+% PAGES, including all figures, tables and references may be used.} 
+% You may use subheadings of your own choosing to make your text 
+% clearer.
+% References may be included in-line (e.g.~Salpeter, 1955, ApJ, 121,
+% 161) and/or all together in a separate section (maybe under a heading
+% "References" like that below) with only citations in the text
+% \cite[e.g.][]{SalpeterE_55a}.  
+% 
+% Example reference list.
+% \renewcommand\refname{\normalsize REFERENCES:}
+% \begin{thebibliography}{}\vspace{-1.5em} 
+% \itemsep 0.0em 
+% \small
+% \bibitem[\protect\citeauthoryear{{Salpeter}}{{Salpeter}}{1955}]
+% {SalpeterE_55a}{Salpeter} E.~E., 1955, ApJ, 121, 161 
+% \end{thebibliography}
+
+\clearpage           % Page separator - DO NOT EDIT OR REMOVE!
+
+
+% *** NOTE: ONE PAGE is to be used for the TECHNICAL JUSTIFICATION,
+% *** FLEXIBILITY \& MINIMUM TIME, and TARGET LIST.  Long target lists
+% *** can be included as an attached sheet at the end of the
+% *** proposal. We recommend using at least 1/2 page for the TECHNICAL
+% *** JUSTIFICATION
+
+
+\noindent{\bf TECHNICAL JUSTIFICATION:}
+
+% INSTRUCTIONS: The STACK cannot grant time that it cannot clearly see
+% will result in the proposed science, so this section is crucial.}
+% This section should describe the feasibility of your science on Keck;
+% it is NOT the place to discuss, e.g. your target selection, or any
+% other aspect of scientific justification.  You must *DEMONSTRATE* and
+% *JUSTIFY* (not just merely state) why and how your proposed
+% observations can be undertaken with Keck.  You may also want to
+% justify why your science requires Keck and/or its instruments, and
+% not those available on smaller telescopes.
+%
+% All proposals MUST address the following points in the description:
+%
+% -  Describe why the chosen instrument is the best choice.
+%
+% -  Include all relevant instrument setup details (grating angles,
+% filters, slit widths, CCD binning etc.).  
+%
+% -  State the number of requested nights and FULLY JUSTIFY the
+% exposure times and overhead calculations for all targets and all
+% set-ups/filters.  Including a worked-out example for a "typical
+% target" from longer target lists is acceptable (but you must justify
+% why the chosen target is "typical").  For a range of targets, include
+% the values for extreme cases. 
+% 
+% ** NOTE: the STACK must be able to reproduce these values without 
+%    further assumptions **
+%
+% -  Detail the visibility of the targets for the requested nights.
+% This must include the number of hours the field is above the Nasmyth
+% platforms (rising or setting limits imposed by Keck I and Keck II).
+% See http://www2.keck.hawaii.edu/inst/common/TelLimits.html for
+% details.  Include the amount of time that they are *not* visible (if
+% any) and detail the observations and science that will be made during
+% this time.
+%
+% Note that you MUST include a back-up program in the BACKUP PROGRAM 
+% section below.  The backup program must address all of the above 
+% points, however, they can be to a lower level of detail.
+%
+% You must also fully *justify* the technical feasibility of any
+% possible variations in the instrument, setup parameters etc. in the
+% "Flexibility \& Minimum Time" section.
+
+
+\noindent{\bf FLEXIBILITY \& MINIMUM TIME:} % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: Flexibility: Describe any aspect of your proposed
+% observations which are flexible with respect to, for example,
+% lunation, dates, instrument availability, instrument setting,
+% distribution of time (e.g. multiple night gaps allowed) etc.  
+% Flexibility will aid us in approving and scheduling your proposal.
+% 
+% Minimum Time: Please also state the minimum amount of time in which 
+% you can undertake your science.  Proposers should keep in mind that 
+% SUT have a limited number of nights on Keck each semester and those 
+% nights must be distributed over each telescope and over 
+% bright/grey/dark time `fairly'.  
+
+
+\clearpage           % Page separator - DO NOT EDIT OR REMOVE!
+
+
+% *** NOTE: A TOTAL OF UP TO TWO PAGES are allowed for the additional
+% *** information below.
+
+\noindent{\bf BACKUP PROGRAM:}     % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: Describe a backup program that you will undertake if
+% prevailing weather conditions at the telescope, including seeing,
+% prevent execution of your main program.  Also, if your proposal relies
+% on instruments or facilities which are still experimental or regularly
+% lose time to technical problems (e.g.~laser guide star adaptive
+% optics) then specify your contingency plans.
+%
+% This section MUST include the science you will obtain with the BACKUP
+% PROGRAM(S) and MUST included details as described in TECHNICAL
+% JUSTIFICATION for the proposed science (albeit, detailed to a lesser
+% extent).
+
+\bigskip
+
+\noindent{\bf CONTRACT END:}    % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: Permanent staff and staff and postdocs on fixed-term 
+% contracts are eligible as PIs.  The previous restriction that 
+% contracts must extend a minimum of 12 months beyond the application 
+% deadline has been lifted.  However, PIs must clearly state their 
+% contract end date.  
+% 
+% As a reminder, postdocs must have a staff member as a Co-I.  The 
+% staff member will be held responsible for the data and outcomes of 
+% the observations.
+
+\bigskip
+
+\noindent{\bf APPLICANTS' ROLES:}    % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: Describe *in detail* the role of the PI and each of the
+% CoIs, particularly those not at Swinburne.  Also specify who the
+% leading authors on papers arising from this proposal are likely to be.
+
+\bigskip
+
+\noindent{\bf OBSERVING EXPERIENCE:}  % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: Describe the PIs observing experience and how it relates
+% to the proposed instrument.  If a PI is inexperienced with the
+% proposed instrument, one must specify how the PI will obtain the
+% necessary experience prior to the observing run.  This may occur in
+% several ways: (1) CoIs are experienced with the instrument and will
+% aid the PI with observations, (2) the PI may arrive in Waimea ahead of
+% time to observe others use the instrument and/or discuss the
+% instrument with the instrument specialist and/or (3) the PI may
+% eavesdrop on other CAS observers using the same, or a similar,
+% instrument during the previous semester.
+
+\bigskip
+
+\noindent{\bf STUDENT THESIS INVOLVEMENT:}  % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: If this proposal forms a part of a student CoI's thesis,
+% describe the role it plays in their thesis work and how crucial it is
+% to the completion of their thesis.
+
+\bigskip
+
+\noindent{\bf OTHER APPLICATIONS:} % - DO NOT EDIT OR REMOVE
+
+% INSTRUCTIONS: Specify the details (including proposal title, time
+% requested and/or already awarded, time allocation committee) for this
+% project and related projects over the last year and in the coming
+% semester which include the PI or any of the CoIs of this proposal.
+
+\bigskip
+
+\noindent{\bf FUTURE APPLICATIONS:} % - DO NOT EDIT OR REMOVE 
+
+% INSTRUCTIONS: Justify the number of STACK Keck nights required in
+% future semesters for the COMPLETION of the project described in this
+% proposal.  If no additional nights are requested by the PI, the STACK
+% will assume that the project will be complete after the current number
+% requested is awarded.  If additional time is requested in the future
+% for a completed project this request must be clearly explained (i.e.,
+% new targets have been identified by the PI or in the literature) or it
+% will be considered negatively in the ranking of the PIs proposals
+% (unless awarded time was lost due to weather/instrument failure).
+
+\clearpage
+
+\noindent{\bf TARGET LIST:}
+
+% INSTRUCTIONS: Use the template table to include a full target list.
+% If you run out of room for the target list, please attach an
+% additional page at the end of the proposal that includes only the
+% target list.
+%
+%\begin{table}[h]
+%\begin{center}
+%{\footnotesize\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+%Object ID & RA(h:m:s)  & Title (d:m:s) & mag. (band) & Redshift\\
+%\hline 
+%3C 273    & 12:29:06.7 & $+$02:03:09.1 & 12.8 V      &  0.158  \\
+%3C 336    & 16:24:39.1 & $+$23:45:12.1 & 18.5 V      &  0.927  \\
+%\hline 
+%
+%\end{tabular}}
+%\end{center}
+%\end{table}
+
+\clearpage
+
+% *** NOTE: The PREVIOUS STACK ALLOCATIONS OUTCOMES and any relevant 
+% *** publication information is to be attached to the proposal as an 
+% *** additional sheet(s).
+
+\noindent{\bf PREVIOUS STACK ALLOCATION OUTCOMES:} % - DO NOT REMOVE
+
+% INSTRUCTIONS: Specify any/all previous Keck allocations to the PI and
+% any of the CoIs of this proposal.  Please fill in the example table
+% shown below.  Additionally, describe the outcomes from those
+% observations, including losses to bad weather and technical problems,
+% and publications (accepted/submitted/in prep) resulting from the
+% previous awarded STACK time.  The STACK is expecting published data
+% for completed projects 1.5 years after the final observation date.
+% The lack of publications for completed projects will considered in the
+% ranking of the PIs proposals.
+
+\begin{table}[h]
+\begin{center}
+{\footnotesize\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+PI       & STACK   & Title                  & Nights &   \%  & Progress    & Publication \\   
+         &  PID    &                        & Awarded& Useful& Status      &             \\
+\hline
+\hline
+Kacprzak & 2010A   & Some Creative Name     &    2   &  100  & Data reduced& Paper to be \\
+         & \_XXXXX & That You Spent Way Too &        &       & analysis    & submitted by\\
+         &         & Long Thinking About    &        &       & in progress.& PI in April \\
+\hline
+CoI      & 2009B   & Another Creative Name  &    2   & 50$^a$&  Analysis   & CoI et al.2009\\
+         & \_XXXXX & That You Spent Way Too &        &       &  Complete   & Nature XXX XXX\\
+         & \_XXXXX &  Long Thinking About   &        &       &             &              \\
+\hline
+
+\end{tabular}}
+\end{center}
+$^a$ One night was lost due to poor weather. 
+\end{table}
+
+\bigskip
+
+\end{document}

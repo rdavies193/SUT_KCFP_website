@@ -1,0 +1,52 @@
+<!--#set var="title" value="CAS - Research - Keck - Schedule 2014B" -->
+<!--#set var="siteid" value="113" -->
+<!--#set var="menuid" value="3851" -->
+<!--#set var="maintainer_name" value="David Fisher" -->
+<!--#set var="maintainer_uname" value="dfisher" -->
+<!--#include virtual="/siteheaders/header.html" -->
+
+<!-- ########################################## -->
+<!-- ############  START CONTENT  ############# -->
+
+<h1>Swinburne Keck Schedule 2015A</h1>
+
+<table cellpadding=8>
+  <br>
+<tr class="main_text_black"><td><h3>Keck I<h3></td><td> </td><td></td><td></td></tr>
+<tr class="main_title_dkgrey"><td>PI</td><td>Project Title</td><td>Dates</td><td>Instrument</td>
+
+<tr class="main_text_black"><td>E. Ryan-Weber</td><td>What kind of galaxies are Lyman continuum galaxies</td><td>Feb 01</td><td><a href="http://www2.keck.hawaii.edu/inst/mosfire/" target="new">MOSFIRE</a></td></tr>
+
+<tr class="main_text_black"><td>D. Fisher</td><td>Kinematics of Giant Star Forming Regions in Low-z Turbulent Disks</td><td>Feb 09</td><td><a href="http://www2.keck.hawaii.edu/inst/osiris/" target="new">OSIRIS</a></td></tr>
+
+<tr class="main_text_black"><td>B. Catinella</td><td>The most HI-rich galaxies at z=0.2: ar these turbulent disks?</td><td>Mar 02</td><td><a href="http://www2.keck.hawaii.edu/inst/osiris/" target="new">OSIRIS</a></td></tr>
+
+<tr class="main_text_black"><td>K. Glazebrook</td><td>ZFIRE: The ultimate truth about galaxy ionisation at z=2 </td><td>Mar 07-08</td><td><a href="http://www2.keck.hawaii.edu/inst/mosfire/" target="new">MOSFIRE</a></td></tr>
+
+<tr class="main_text_black"><td>J. Cooke</td><td>Not the usual suspects: Quantification key contributions to cosmic reionization</td><td>Mar 19</td><td><a href="http://www2.keck.hawaii.edu/inst/lris/" target="new">LRIS</a></td></tr> 
+
+<tr class="main_text_black"><td></td><td> </td><td></td><td></td></tr>
+<tr class="main_text_black"><td><h3>Keck II<h3></td><td> </td><td></td><td></td></tr>
+<tr class="main_title_dkgrey"><td>PI</td><td>Project Title</td><td>Dates</td><td>Instrument</td>
+
+<tr class="main_text_black"><td>D. Forbes</td><td>Surveying the chemo-dynamics of early-type galaxy halos</td><td>Mar 14</td><td><a href="http://www2.keck.hawaii.edu/inst/deimos/" target="new">DEIMOS</a></td></tr>
+
+<tr class="main_text_black"><td>E Keane</td><td>Near Infrared signatures of aurorae outide the solar system</td><td>Jun 12</td><td><a href="http://www2.keck.hawaii.edu/inst/nires/" target="new">NIRES</a></td></tr>
+
+<tr class="main_text_black"><td>G. Kacprzak</td><td>Bridging the gap between the galactic interstellar and circumgalactic media at z=0.3</td><td>Jul 16</td><td><a href="http://www2.keck.hawaii.edu/inst/esi/" target="new">ESI</a></td></tr>
+
+
+
+   </table>
+
+<br>
+<h2>W.M. Keck Observatory Telescope Schedules
+<br>
+<a href="http://www2.keck.hawaii.edu/schedule/index.php?sched=Both+Tels&year=2015&month=-2&go=GO#" target="new">See the Semester 2015A Schedule here</a>
+<br>
+<a href="http://www2.keck.hawaii.edu/observing/scheds.html" target="new">Current Month</a></h2> 
+
+<!-- ############  END CONTENT    ############# -->
+<!-- ########################################## -->
+
+<!--#include virtual="/siteheaders/footer.html"-->
