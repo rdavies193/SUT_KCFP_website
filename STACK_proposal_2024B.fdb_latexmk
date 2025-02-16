@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1732241134.57538 "/home/bec/Documents/Swinburne/Keck/STACK Secretary/CfP_website/SUT_KCFP_website/STACK_proposal_2024B.tex" "STACK_proposal_2024B.pdf" "STACK_proposal_2024B" 1732241134.95542 0
+["pdflatex"] 1739745617.18159 "/home/bec/Documents/Swinburne/Keck/STACK Secretary/CfP_website/SUT_KCFP_website/STACK_proposal_2024B.tex" "STACK_proposal_2024B.pdf" "STACK_proposal_2024B" 1739745617.52622 0
   "/etc/texmf/web2c/texmf.cnf" 1683937488.02407 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/bec/Documents/Swinburne/Keck/STACK Secretary/CfP_website/SUT_KCFP_website/STACK_proposal_2024B.tex" 1726778822 15299 01dd96fe64a9aba21cf811e70a5e39e3 ""
+  "/home/bec/Documents/Swinburne/Keck/STACK Secretary/CfP_website/SUT_KCFP_website/STACK_proposal_2024B.tex" 1739745616.92212 15299 4b6e276d7e83c5b291053ca085239e90 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -40,8 +40,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1718974547.35903 283500 e47f97a261748c5b7e226d0fd7d898fb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1718974576 8213592 28ea07031755cf272fe052849c138302 ""
-  "STACK_proposal_2024B.aux" 1732241134.90624 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "STACK_proposal_2024B.tex" 1726778822 15299 01dd96fe64a9aba21cf811e70a5e39e3 ""
+  "STACK_proposal_2024B.aux" 1739745617.49114 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "STACK_proposal_2024B.tex" 1739745616.92212 15299 4b6e276d7e83c5b291053ca085239e90 ""
   (generated)
   "STACK_proposal_2024B.aux"
   "STACK_proposal_2024B.log"
