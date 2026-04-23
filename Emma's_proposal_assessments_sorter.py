@@ -1,16 +1,19 @@
 import os
 import glob
 import shutil
-os.chdir('/Users/ecarli/OneDrive - Swinburne University/Work/Swinburne_Postdoc/Keck_STACK/Secretary/2026A/Assessments')
+os.chdir('/Users/ecarli/OneDrive - Swinburne University/Work/Swinburne_Postdoc/Keck_STACK/Secretary/2026B/Assessments')
 
-def copy_and_rename(src_path, dest_dir):
+def move_with_standard_name(src_path, dest_dir, proposal, role, index):
     """
-    Copies a file to a destination directory, automatically renaming it if a
-    file with the same name already exists by adding a counter (e.g., file(1).txt).
+    Moves a file to a destination directory using a standardized name format:
+    {proposal}_{role}{index}{original_extension}
 
     Args:
         src_path (str): The full path to the source file.
         dest_dir (str): The path to the destination directory.
+        proposal (str): The proposal ID (e.g. W322).
+        role (str): The assessor role label (Reader, Member, TA).
+        index (int): Sequential number within this proposal/role.
     """
     if not os.path.isfile(src_path):
         raise FileNotFoundError(f"Source file not found: {src_path}")
@@ -18,42 +21,40 @@ def copy_and_rename(src_path, dest_dir):
     if not os.path.isdir(dest_dir):
         raise NotADirectoryError(f"Destination directory not found: {dest_dir}")
         
-    filename = os.path.basename(src_path)
-    base, extension = os.path.splitext(filename)
-    dest_path = os.path.join(dest_dir, filename)
-    counter = 1
+    _, extension = os.path.splitext(os.path.basename(src_path)) #.pdf extension, basename is file name with extension.
+    dest_path = os.path.join(dest_dir, f"{proposal}_{role}{index}{extension}")
 
-    while os.path.exists(dest_path):
-        dest_path = os.path.join(dest_dir, f"{base}({counter}){extension}")
-        counter += 1
-        print(f"File exists. Trying new name: {dest_path}")
+    if os.path.exists(dest_path):
+        raise FileExistsError(f"Destination file already exists: {dest_path}")
     
     shutil.move(src_path, dest_path)
-    #print(f"Copied '{src_path}' to '{dest_path}'")
 
-#2026A
-proposals = ['W323','W418','W347','W350','W047','W031','W225','W421']
-#make a dictionary of readers and their conflicts (from Google form)
-readers = {'Alister': ['W031'],
-           'Jeff': ['W347','W350'],
-           'Themiya': ['W421'],
-           'Ashley': []} #Ashley has no conflicts
-#TODO next year add student member - need to ask them for their conflicts 
+#2026B
+proposals = ['W322','W353','W354','W355','W231','W323','W325','W196','W317','W333']
 
-members = {'Jesse': [], #Jesse has no conflicts #I'm giving Jesse two proposals to lead W031 and W421
-          'Ivo': [], #gave him W225
-          'Darren': ['W347','W350'], #gave him W418
-          'Karl': ['W225','W421'], #I randomly gave Karl two proposals to lead W323 and W350
-          'Duncan': ['W418','W031'], #gave him W347
-          'Agne': []} #Agne has no conflicts #I'm giving Agne one proposal to lead W047
+#make a dictionary of people and their conflicts (from Google form)
+readers = {'Ned Taylor': [], #no conflicts 
+           'Alister Graham': [], #no conflicts 
+           'Ivo Labbe': [],#no conflicts
+           'Michael Murphy': ['W196'],
+           'Jeff Cooke' : ['W353','W354','W355'],
+           'Ashley Stock': []} #no conflicts
 
-technical_assessors = { 'Deanne': ['W047'],
-                       'Jonah': ['W323','W418','W347','W350','W031','W225','W421']} #Jonah is doing TA for Deanne's only conflict W047 so I've put him as conflicted for all the rest
+members = {'Jesse van de Sande': [], #no conflicts, leads W322, W325
+          'Adam Deller': [], #no conflicts, leads W353
+          'Warrick Couch': ['W322','W323','W325'], #leads W354, W196
+          'Karl Glazebrook': ['W196','W317'], #leads W355, W317
+          'Agne Semenaite': [] ,#no conflicts #leads W323
+          'Daniel Reardon': [],} #leads W231, W333
+
+technical_assessors = { 
+                       'Jeff TA': ['W353','W354','W355'], #THESE ARE CONFLICTS !
+                        'Deanne TA': ['W231'],} #THESE ARE CONFLICTS !
 
 
-#First make directory for everyone and then I will manually put their evaluations in their folders
-#CHeck that none of them put their names on!
-#Make a copy of all this in a separate folder before moving files around
+# First make directory for everyone and then I will manually put their evaluations in their folders
+# CHeck that none of them put their names on!
+# Make a copy of all this in a separate folder before moving files around
 for reader in readers:
     os.makedirs(reader, exist_ok=True)
 
@@ -82,34 +83,55 @@ for proposal in proposals:
     os.makedirs(proposal, exist_ok=True)
 
 #Now move everyone's proposal assessments into the proposal folder
-for reader, conflicts in readers.items():
+for reader_idx, (reader, conflicts) in enumerate(readers.items(), start=1):
     for proposal in proposals:
         if proposal not in conflicts:
             assessment = glob.glob(f'./{reader}/*{proposal}*')
-            if assessment!=[]: 
-                copy_and_rename(f'{assessment[0]}', f'./{proposal}/')
+            if assessment!=[]:
+                for filepath in sorted(assessment):
+                    move_with_standard_name(
+                        filepath,
+                        f'./{proposal}/',
+                        proposal,
+                        'Reader',
+                        reader_idx
+                    )
             else:
                 print(f'No assessments found for proposal {proposal} by reader {reader}')
             if len(assessment)>1:
                 print(f'Multiple assessments found for proposal {proposal} by reader {reader}')
 
-for member, conflicts in members.items():
+for member_idx, (member, conflicts) in enumerate(members.items(), start=1):
     for proposal in proposals:
         if proposal not in conflicts:
             assessment = glob.glob(f'./{member}/*{proposal}*')
-            if assessment!=[]: 
-                copy_and_rename(f'{assessment[0]}', f'./{proposal}/')
+            if assessment!=[]:
+                for filepath in sorted(assessment):
+                    move_with_standard_name(
+                        filepath,
+                        f'./{proposal}/',
+                        proposal,
+                        'Member',
+                        member_idx
+                    )
             else:
                 print(f'No assessments found for proposal {proposal} by member {member}')
             if len(assessment)>1:
                 print(f'Multiple assessments found for proposal {proposal} by member {member}')
 
-for ta, conflicts in technical_assessors.items():
+for ta_idx, (ta, conflicts) in enumerate(technical_assessors.items(), start=1):
     for proposal in proposals:
         if proposal not in conflicts:
             assessment = glob.glob(f'./{ta}/*{proposal}*')
-            if assessment!=[]: 
-                copy_and_rename(f'{assessment[0]}', f'./{proposal}/')
+            if assessment!=[]:
+                for filepath in sorted(assessment):
+                    move_with_standard_name(
+                        filepath,
+                        f'./{proposal}/',
+                        proposal,
+                        'TA',
+                        ta_idx
+                    )
             else:
                 print(f'No assessments found for proposal {proposal} by technical assessor {ta}')
             if len(assessment)>1:
