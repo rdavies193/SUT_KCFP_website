@@ -43,9 +43,9 @@ readers = {'Ned Taylor': [], #no conflicts
 members = {'Jesse van de Sande': [], #no conflicts, leads W322, W325
           'Adam Deller': [], #no conflicts, leads W353
           'Warrick Couch': ['W322','W323','W325'], #leads W354, W196
-          'Karl Glazebrook': ['W196','W317'], #leads W355, W317
+          'Karl Glazebrook': ['W196','W317'], #leads W355 ,W333
           'Agne Semenaite': [] ,#no conflicts #leads W323
-          'Daniel Reardon': [],} #leads W231, W333
+          'Daniel Reardon': [],} #leads W231, W317
 
 technical_assessors = { 
                        'Jeff TA': ['W353','W354','W355'], #THESE ARE CONFLICTS !
