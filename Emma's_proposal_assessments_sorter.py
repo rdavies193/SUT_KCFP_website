@@ -1,7 +1,7 @@
 import os
 import glob
 import shutil
-os.chdir('/Users/ecarli/OneDrive - Swinburne University/Work/Swinburne_Postdoc/Keck_STACK/Secretary/2026B/Assessments')
+os.chdir('/Users/ecarli/OneDrive - Swinburne University/Work/Swinburne_Postdoc/Keck_STACK/Secretary/2027A/Evaluations')
 
 def move_with_standard_name(src_path, dest_dir, proposal, role, index):
     """
@@ -29,40 +29,36 @@ def move_with_standard_name(src_path, dest_dir, proposal, role, index):
     
     shutil.move(src_path, dest_path)
 
-#2026B
-proposals = ['W322','W353','W354','W355','W231','W323','W325','W196','W317','W333']
+#2027A
+proposals = ['W229','W250', 'W268','W101','W259','W249','W002','W230','W030','W224']
 
 #make a dictionary of people and their conflicts (from Google form)
-readers = {'Ned Taylor': [], #no conflicts 
-           'Alister Graham': [], #no conflicts 
+readers = {'Ned Taylor': [], #no conflicts
+           'Alister Graham': [], #no conflicts
            'Ivo Labbe': [],#no conflicts
-           'Michael Murphy': ['W196'],
-           'Jeff Cooke' : ['W353','W354','W355'],
-           'Ashley Stock': []} #no conflicts
+           'Alma Sebastian': []} #no conflicts
 
-members = {'Jesse van de Sande': [], #no conflicts, leads W322, W325
-          'Adam Deller': [], #no conflicts, leads W353
-          'Warrick Couch': ['W322','W323','W325'], #leads W354, W196
-          'Karl Glazebrook': ['W196','W317'], #leads W355 ,W333
-          'Agne Semenaite': [] ,#no conflicts #leads W323
-          'Daniel Reardon': [],} #leads W231, W317
+members = {'Jesse van de Sande': [], #no conflicts, leads W230
+          'Adam Deller': [], #no conflicts, leads W259, W249
+          'Duncan Forbes': ['W030','W002'], #leads W229, W250
+          'Karl Glazebrook': ['W249','W250','W268'], #leads W030, W224
+          'Ashley Stock': [] ,#no conflicts #leads W101
+          'Jeff Cooke': ['W229','W230'] #leads W268, W002
+          } 
 
 technical_assessors = { 
-                       'Jeff TA': ['W353','W354','W355'], #THESE ARE CONFLICTS !
-                        'Deanne TA': ['W231'],} #THESE ARE CONFLICTS !
+                       'Jeff TA': ['W229','W230'], #THESE ARE CONFLICTS !
+                        'Deanne TA': ['W101','W259'],} #THESE ARE CONFLICTS !
 
+# #run this without any files (stop code later)
+# for reader in readers:
+#     os.makedirs(reader, exist_ok=True)
 
-# First make directory for everyone and then I will manually put their evaluations in their folders
-# CHeck that none of them put their names on!
-# Make a copy of all this in a separate folder before moving files around
-for reader in readers:
-    os.makedirs(reader, exist_ok=True)
+# for member in members:
+#     os.makedirs(member, exist_ok=True)
 
-for member in members:
-    os.makedirs(member, exist_ok=True)
-
-for ta in technical_assessors:
-    os.makedirs(ta, exist_ok=True)
+# for ta in technical_assessors:
+#     os.makedirs(ta, exist_ok=True)
 
 #Check everyone's conflicts exist in the proposal list
 for reader, conflicts in readers.items():
@@ -77,10 +73,12 @@ for ta, conflicts in technical_assessors.items():
     for conflict in conflicts:
         assert conflict in proposals, f"Conflict {conflict} for technical assessor {ta} not in proposal list"
 
+#STOP CODE HERE AND MANUALLY MOVE EVALUATIONS IN EACH PERSON'S FOLDER, THEN RESTART CODE BELOW
+# CHeck that none of them put their names inside form!
 
 #Now make a folder for each proposal
-for proposal in proposals:
-    os.makedirs(proposal, exist_ok=True)
+# for proposal in proposals:
+#     os.makedirs(proposal, exist_ok=True)
 
 #Now move everyone's proposal assessments into the proposal folder
 for reader_idx, (reader, conflicts) in enumerate(readers.items(), start=1):
